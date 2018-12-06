@@ -1,0 +1,71 @@
+\input{Header/Header.tex}
+\input{Glossar/glossary}
+
+\begin{document}
+
+
+
+% Titelseite einfügen.
+\input{Titelseite/Titelseite}
+
+% Counter zurücksetzen. Römische Ziffern einstellen.
+\pagenumbering{Roman}
+\setcounter{page}{1}
+
+% Selbständigkeitserklärung einfügen.
+\input{Erklaerung/Erklaerung}
+
+% Abstract einfügen.
+\input{Abstract/Abstract}
+
+% Inhaltsverzeichnis generieren.
+\tableofcontents
+
+% Neue Seite. Counter zurücksetzen. Arabische Ziffern einstellen.
+\cleardoublepage
+\pagenumbering{arabic}
+\setcounter{page}{1}
+
+% Kapitel einfügen.
+\input{Kapitel/Kapitel3.tex}
+\input{Kapitel/Kapitel4.tex}
+
+
+
+% Optimierung für Literaturverzeichnis
+\setcounter{biburllcpenalty}{8000}
+\setcounter{biburlucpenalty}{8000}
+
+% Literaturverzeichnis generieren.
+% Inhalt erscheint, sobald Einträge in der Bib hinterlegt sind!
+\cleardoublepage
+\addcontentsline{toc}{chapter}{Literaturverzeichnis}
+\printbibliography[title={Literaturverzeichnis}]
+
+% Abbildungsverzeichnis generieren.
+\cleardoublepage
+\addcontentsline{toc}{chapter}{\listfigurename}
+\listoffigures
+
+
+% Tabellenverzeichnis generieren.
+%\cleardoublepage
+%\addcontentsline{toc}{chapter}{\listtablename}
+%\listoftables
+
+% Listingverzeichnis generieren.
+\cleardoublepage
+\renewcommand{\lstlistlistingname}{Listingverzeichnis}
+\addcontentsline{toc}{chapter}{\lstlistlistingname}
+\lstlistoflistings
+
+%
+%% Anhang einfügen.
+%\cleardoublepage
+%\input{Anhang/Anhang}
+
+% Glossar generieren
+\glsaddall
+\printglossaries
+
+\end{document}

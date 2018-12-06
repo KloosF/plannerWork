@@ -1,0 +1,104 @@
+\documentclass[a4paper, 12pt, ngerman, twoside, openright]{scrreprt}
+
+% Rendering packages
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{color}
+\usepackage{fancyvrb}
+
+% Page dimensions
+\usepackage[inner=3.5cm,outer=2.5cm,top=3.7cm,bottom=3.5cm]{geometry} % Settings for twoside documents.
+\usepackage{parskip}
+
+% Font styling
+\usepackage[ngerman]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\renewcommand\familydefault{\sfdefault}
+
+% Tables
+\usepackage{tabularx}
+\usepackage{tabulary}
+\usepackage{longtable, lscape}
+
+% Headers
+\usepackage{scrpage2}  % header and footer for KOMA-Script
+\pagestyle{scrheadings}
+\automark[section]{chapter}
+
+% Zitate
+\usepackage[backend=bibtex, style=numeric, sorting=none]{biblatex}
+\usepackage[babel,german=guillemets]{csquotes}
+\bibliography{Bibliothek/Bibliothek}
+
+\usepackage[hyperindex,breaklinks,colorlinks=true,linkcolor=black,urlcolor=blue,citecolor=black]{hyperref}
+
+% Code Blöcke
+\usepackage{listings}
+
+% Listings konfigurieren.
+\lstset{language=[Objective]C, 
+        breakindent=40pt, 
+        breaklines, 
+        frame=lines,
+        morekeywords={id, Class, SEL, IMP, BOOL, nil, Nil, NO, YES,
+                  oneway, in, out, inout, bycopy, byref,
+                  self, super, _cmd,
+                  @required, @optional,
+                  @try, @throw, @catch, @finally,
+                  @synchronized, @property, @synthesize, @dynamic},
+        basicstyle=\ttfamily\scriptsize,
+        literate=
+            {Ö}{{\"O}}1
+            {Ä}{{\"A}}1
+            {Ü}{{\"U}}1
+            {ß}{{\ss}}2
+            {ü}{{\"u}}1
+            {ä}{{\"a}}1
+            {ö}{{\"o}}1}
+        
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+\definecolor{orange}{rgb}{1,0.35,0.2}
+\definecolor{lightblue}{rgb}{0.53,0.81,0.98}        
+
+\lstset{frame=tb,
+	language=Java,
+	aboveskip=3mm,
+	belowskip=3mm,
+	showstringspaces=false,
+	columns=flexible,
+	basicstyle={\small\ttfamily},
+	numbers=none,
+	numberstyle=\tiny\color{gray},
+	keywordstyle=\color{blue},
+	commentstyle=\color{dkgreen},
+	stringstyle=\color{mauve},
+	breaklines=true,
+	breakatwhitespace=true,
+	tabsize=3
+}
+
+\lstdefinelanguage{drools}{frame=tb,
+	morekeywords={rule, rule, when,then, end, end}
+	aboveskip=3mm,
+	belowskip=3mm,
+	showstringspaces=false,
+	columns=flexible,
+	basicstyle={\small\ttfamily},
+	numbers=none,
+	numberstyle=\tiny\color{lightblue},
+	keywordstyle=\color{orange},
+	breaklines=true,
+	breakatwhitespace=true,
+	tabsize=4}
+
+%NEW COMMANDS
+\newcommand\tab[1][1cm]{\hspace*{#1}}
+
+%Verfickte Glossare
+\usepackage[nonumberlist,acronym,toc]{glossaries}
+\makeglossaries
