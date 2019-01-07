@@ -3,15 +3,13 @@
 
 \begin{document}
 
-
-
-% Titelseite manuell einfügen.
-
 % Counter zurücksetzen. Römische Ziffern einstellen.
-%\pagenumbering{Roman}
-%\setcounter{page}{1}
+\pagenumbering{Roman}
+\setcounter{page}{1}
 
-% Selbständigkeitserklärung manuell einfügen.
+% Titelseite und Selbstständigkeitserklärung einfügen
+% Müssen vorher im Projekt Deckblatt.tex gebaut werden
+\includepdf[pages=-]{Deckblatt/Deckblatt.pdf}
 
 % Abstract einfügen.
 \input{Abstract/Abstract}
