@@ -9,13 +9,16 @@
 
 % Titelseite und Selbstständigkeitserklärung einfügen
 % Müssen vorher im Projekt Deckblatt.tex gebaut werden
-\includepdf[pages=-]{Deckblatt/Deckblatt.pdf}
+%\includepdf[pages=-]{Deckblatt/Deckblatt.pdf}
+\input{Cover/cover.tex}
+\input{Cover/title.tex}
+\input{Cover/disclaimer.tex}
 
 % Abstract einfügen.
 \input{Abstract/Abstract}
 
 % Erklärung männliche Form
-\input{Erklaerung/Erklaerung.tex}
+% \input{Erklaerung/Erklaerung.tex}
 
 % Inhaltsverzeichnis generieren.
 \tableofcontents

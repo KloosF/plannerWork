@@ -1,0 +1,32 @@
+\begin{titlepage}
+
+\input{settings/commands}
+	
+  \centering
+
+  \vspace{40mm}
+  \includegraphics[width=40mm]{logos/tum}
+
+  \vspace{5mm}
+  {\huge\MakeUppercase{\getFaculty{}}}\\
+
+  \vspace{5mm}
+  {\large\MakeUppercase{\getUniversity{}}}\\
+
+  \vspace{20mm}
+  {\large \getDoctype{}}
+
+  \vspace{15mm}
+  {\huge\bfseries \getTitle{}}
+
+  \vspace{15mm}
+  \begin{tabular}{l l}
+    Autor: & \getAuthor{} \\
+    Supervisor: & \getSupervisor{} \\
+    Betreuer: & \getAdvisor{} \\
+    Eingereicht am: & \getSubmissionDate{} \\
+  \end{tabular}
+
+  \vspace{15mm}
+  \includegraphics[width=20mm]{logos/faculty}
+\end{titlepage}
