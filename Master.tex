@@ -17,8 +17,8 @@
 % Abstract einfügen.
 \input{Abstract/Abstract}
 
-% Erklärung männliche Form
-% \input{Erklaerung/Erklaerung.tex}
+% Danksagung
+\input{Danksagung/Danksagung.tex}
 
 % Inhaltsverzeichnis generieren.
 \tableofcontents
@@ -54,25 +54,8 @@
 \addcontentsline{toc}{chapter}{\listfigurename}
 \listoffigures
 
-
-% Tabellenverzeichnis generieren.
-%\cleardoublepage
-%\addcontentsline{toc}{chapter}{\listtablename}
-%\listoftables
-
-% Listingverzeichnis generieren.
-\cleardoublepage
-\renewcommand{\lstlistlistingname}{Listingverzeichnis}
-\addcontentsline{toc}{chapter}{\lstlistlistingname}
-\lstlistoflistings
-
-%
 %% Anhang einfügen.
-%\cleardoublepage
-%\input{Anhang/Anhang}
-
-% Glossar generieren
-\glsaddall
-\printglossaries
+\cleardoublepage
+\input{Anhang/Anhang}
 
 \end{document}
